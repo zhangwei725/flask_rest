@@ -15,3 +15,10 @@ class User(db.Model):
     is_delete = db.Column(db.Boolean, default=False)
     # wight = db.Column(db.Float(2))
     price = db.Column(db.Numeric(7, 2), nullable=False)
+    addresses = db.relationship('Address', backref='user')
+
+
+class Address(db.Model):
+    id = db.Column(db.Integer(), primary_key=True, autoincrement=True)
+    detail = db.Column(db.String(64), nullable=False)
+    user_id = db.Column(db.Integer, db.ForeignKey(User.user_id))

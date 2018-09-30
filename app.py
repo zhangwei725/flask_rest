@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, jsonify
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
@@ -7,13 +7,12 @@ app = Flask(__name__)
 # 2> 实例化
 api = Api(app=app)
 # 3  注册
-
 """
-
 js框架
-
 """
 
+
+# 对象不能转化成
 
 # 定义视图层
 class IndexResource(Resource):
