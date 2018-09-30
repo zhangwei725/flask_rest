@@ -34,7 +34,6 @@ nav_fields = {
     'nav_id': fields.Integer,
     'nav_name': fields.String,
 }
-
 cate_fields = {
     'cate_id': fields.Integer,
     'name': fields.String,
@@ -58,7 +57,6 @@ result = {
     'data': fields.Nested(data_fields)
 }
 
-
 class HomeHeadApi(Resource):
     @marshal_with(result)
     def get(self):
@@ -73,5 +71,8 @@ class HomeHeadApi(Resource):
 
 
 class HomeDataApi(Resource):
+
     def get(self):
         return ''
+
+
